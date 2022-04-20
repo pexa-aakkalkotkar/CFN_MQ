@@ -12,16 +12,16 @@ Parameters:
   Username:
     Description: Amazon MQ Broker Username
     Type: String
-    Default: AmazonMQPoC
+    Default: admin
 
   Password:
     Description: Amazon MQ Broker Password. If you are using a custom password, make a note of it. You will need it to access the broker.
     Type: String
-    Default: AmazonMQPoC1234$
+    Default: admin
 
   VPCId:
     Description: Select a VPC. For a simple broker deployment, select a VPC that has a public subnet.
-    Type: AWS::EC2::VPC::Id
+    Type: AWS::EC2::VPC::vpc-a10bc2c5
     
   SubnetId:
     Description: Select a Subnet Id that belongs to the VPC selected above. For a simple broker deployment, select a public subnet.
@@ -73,8 +73,8 @@ Resources:
       SecurityGroups: 
         - !Ref StandaloneAmazonMQSecurityGroup
       EngineType: ActiveMQ
-      EngineVersion: "5.15.8"
-      HostInstanceType: mq.t2.micro
+      EngineVersion: "5.16.3"
+      HostInstanceType: mq.t3.micro
       PubliclyAccessible: "true"
       Users: 
         - 
