@@ -9,6 +9,14 @@ Description: AWS CloudFormation sample template CF_Template_AmazonMQBroker.yaml.
   2. [Accessing the ActiveMQ Web Console of a Broker without Public Accessibility](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/accessing-web-console-of-broker-without-private-accessibility.html).
 
 Parameters:
+  Environment:
+    Type: "String"
+    Description: "NON PROD ENV"
+    AllowedValues:
+      - "TST"
+      - "DEV"
+      - "PRF"
+      - "PSUP"
   Username:
     Description: Amazon MQ Broker Username
     Type: String
